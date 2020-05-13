@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import CSRNewAnalysis from '../views/CSRNewAnalysis.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,11 @@ Vue.use(VueRouter)
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: "/csrnewanalysis",
+    name: "csr-new-analysis",
+    component: CSRNewAnalysis
   },
   {
     path: '/about',
