@@ -45,7 +45,13 @@
         <input type="text" v-model="personal_value_tsa_pre"></p>
     </div>
     <div>{{empty_array_on_my_vue_page}}</div>
+    <!-- my button that works -->
     <button v-on:click="csrAnalysis()">Do my cost-benefit analysis</button>
+    <!-- their pretty turquoise button -->
+    <ul class="actions fit">
+			<li><a href="#" class="button primary fit">Analyze my costs and benefits</a></li>
+		</ul>
+    <!-- end of turquoise button -->
     <h2>This app built by {{name}}</h2>
   </div>
 </template>
