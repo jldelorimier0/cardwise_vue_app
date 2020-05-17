@@ -9,6 +9,16 @@
         <input type="text" v-model="spending_total_all_credit_cards_monthly"></p>
       <p>Could you move that full amount of spending each month onto one new credit card if it benefitted you?
         <input type="text" v-model="spending_amount_movable_monthly"></p>
+      <!-- their radio buttons that don't work -->
+      <!-- <div class="col-6 col-12-medium">
+        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+        <label for="demo-priority-low">Yes</label>
+      </div>
+      <div class="col-6 col-12-medium">
+        <input type="radio" id="demo-priority-normal" name="demo-priority">
+        <label for="demo-priority-normal">No</label>
+      </div> -->
+      <!-- end of radio buttons -->
       <p>If no, How much of your current spending per month would you be willing to divert to this credit card?
         <input type="text" v-model="spending_willing_to_change_credit_cards_monthly"></p>
       <p>How much on average do you spend per month on Lyft?
@@ -19,9 +29,9 @@
         <input type="text" v-model="personal_value_lyft_cancel_ride_times_monthly"></p>
       <p>How many times a year do you leave something in a Lyft?
         <input type="text" v-model="personal_value_lyft_lose_something_times_12mo"></p>
-      <p>How much would you say you spend per year on meal delivery services such as Doordash, Postmates, or Grubhub?
+      <p>How much would you say you spend per month on meal delivery services such as Doordash, Postmates, or Grubhub?
         <input type="text" v-model="spending_meal_deliverly_total_monthly"></p>
-      <p>How much would you say you spend per year on JUST DELIVERY FEES from meal delivery services such as Doordash, Postmates, or Grubhub?
+      <p>How much would you say you spend per month on JUST DELIVERY FEES from meal delivery services such as Doordash, Postmates, or Grubhub?
         <input type="text" v-model="spending_meal_deliverly_delivery_fee_monthly"></p>
       <p>How much do you plan to spend in the next 12 months on flights? If you don't have a plan, then how much do you think you've spent historically on average each year?
         <input type="text" v-model="spending_travel_flights_next_12mo"></p>
@@ -35,8 +45,29 @@
         <input type="text" v-model="spending_dining_total_monthly"></p>
       <p>Do you already have Global Entry?
         <input type="text" v-model="global_entry_boolean"></p>
+      <!-- their radio buttons that don't work -->
+      <div class="col-6 col-12-medium">
+        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+        <label for="demo-priority-low">Yes</label>
+      </div>
+      <div class="col-6 col-12-medium">
+        <input type="radio" id="demo-priority-normal" name="demo-priority">
+        <label for="demo-priority-normal">No</label>
+      </div>
+      <!-- end of radio buttons -->
       <p>If no, do you already have TSA pre-check?
-        <input type="text" v-model="tsa_pre_boolean"></p>
+        <input type="text" v-model="tsa_pre_boolean">
+      </p>
+      <!-- their radio buttons that don't work -->
+      <div class="col-6 col-12-medium">
+        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+        <label for="demo-priority-low">Yes</label>
+      </div>
+      <div class="col-6 col-12-medium">
+        <input type="radio" id="demo-priority-normal" name="demo-priority">
+        <label for="demo-priority-normal">No</label>
+      </div>
+      <!-- end of radio buttons -->
       <p>If you don't have either yet, if you had to put a dollar value for yourself personally how much would pre-check plus global entry be worth to you in dollars if it lasted for 5 years? If this is something you would never spend money on, you should say zero.
         <input type="text" v-model="personal_value_global_entry_and_tsa_pre"></p>
       <p>If you have pre-check but not global entry, how much would you pay to just get global entry?
@@ -47,12 +78,38 @@
     <div>{{empty_array_on_my_vue_page}}</div>
     <!-- my button that works -->
     <button v-on:click="csrAnalysis()">Do my cost-benefit analysis</button>
-    <!-- their pretty turquoise button -->
-    <ul class="actions fit">
+    <!-- their pretty turquoise button that isn't working for me -->
+    <!-- <ul class="actions fit">
 			<li><a href="#" class="button primary fit">Analyze my costs and benefits</a></li>
-		</ul>
+		</ul> -->
     <!-- end of turquoise button -->
-    <h2>This app built by {{name}}</h2>
+    <!-- I want the results to go here -->
+    <!-- <section id="one">
+								<div class="container">
+									<header class="major">
+										<h2>{{empty_array_on_my_vue_page}}</h2>
+										<p>I want my questions to look like this. But maybe with the h2 coloring same as above. <a href="http://html5up.net">Link here</a>.</p>
+									</header>
+									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
+								</div>
+							</section> -->
+    <!-- disclaimers below -->
+    <!-- <div class="row">
+      <div class="col-12 col-12-xsmall">
+        <h5>About this analysis</h5>
+        <ul class="alt">
+          <li>This app was built to do a conservative cost benefit analysis based on what a user already spends monthly and annually. The user may also derive benefit from additional perks of this card including but not limited to the following:</li>
+          <li>Additional Lyft Pink Membership benefits such as 3 free ride cancellations per month, reimbursed lost and found fees, and 3 complimentary 30 minute scooter or Lyft bike rides per month.</li>
+          <li>Additional DashPass benefits from DoorDash including free delivery on orders over $12 and $60 in additional DoorDash credits to use in 2021. </li>
+          <li>This analysis was done under the assumption that credit card balances are paid in full at the end of each payment period.</li>
+          <li>Carrying a balance on any credit card can lead to high interest payments and a lower credit score for the card holder, which generally has a negative financial impact on the cardholder. In general, paying off all other outstanding credit card debt is recommended before opening an additional credit card.</li>
+          <li>The information provided by this app is edcuational only, and is not financial advice.</li>
+        </ul>
+      </div>
+    </div> -->
+    <!-- end of disclaimers -->
+    <!-- <h2>Analysis built by {{name}}</h2>
+    <h2>Copy written by {{name}}</h2> -->
   </div>
 </template>
 
@@ -65,7 +122,7 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      message: "Get pumped for your Card app! Vue.js!",
+      message: "",
       name: "Julia de Lorimier",
       empty_array_on_my_vue_page: [],
       spending_total_all_credit_cards_monthly: "",
@@ -92,7 +149,7 @@ export default {
   created: function() {
     // Anything inside of the `created:` function will run as soon as the page loads.
     console.log('Console.log message in the created');
-    // What Brian says the axios lines are doing "Go to Rails app (axios) > go to index action (in your case it's the calculate_cost_benefit action: /api/calculate_cost_benefot) > take all the data (then function response) > print it out (console.log)"
+    // What Brian says the axios lines are doing "Go to Rails app (axios) > go to index action (in your case it's the calculate_cost_benefit action: /api/calculate_cost_benefit) > take all the data (then function response) > print it out (console.log)"
     axios.post("/api/calculate_cost_benefit").then(response => {
       // console.log(response);
       // This next line will give you the render json hash from line ~351 in your credit_cards_controller.rb
@@ -101,7 +158,7 @@ export default {
     })
   },
   methods: {
-    csrAnalysis: function() {
+    csrAnalysis: function() { 
       console.log("spending_total_all_credit_cards_monthly: " + this.spending_total_all_credit_cards_monthly)
       console.log("spending_amount_movable_monthly: " + this.spending_amount_movable_monthly)
       console.log("spending_willing_to_change_credit_cards_monthly: " + this.spending_willing_to_change_credit_cards_monthly)

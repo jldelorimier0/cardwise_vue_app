@@ -40,6 +40,8 @@
 				<!-- Main -->
 					<div id="main">
 
+            <router-view/> 
+
 						<!-- One -->
 							<section id="one">
 								<div class="image main" data-position="center">
@@ -393,7 +395,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												</div>
                         <!-- end of email -->
                         <!-- my code -->
-                        <router-view/> 
+                        
                         <!-- end of my code -->
                         <!-- dropdown -->
 												<div class="col-12">
