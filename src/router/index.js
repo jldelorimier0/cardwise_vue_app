@@ -29,7 +29,14 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  // adding the stuff below based on troubleshooting instructions from the theme installation cheat sheet. 
+  // then commented it out bc it didn't seem to help
+  // watch: {
+  //   '$route': function() {
+  //     window.location.reload();
+  //   }
+  // }
 })
 
 export default router
