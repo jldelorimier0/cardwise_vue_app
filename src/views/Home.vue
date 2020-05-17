@@ -1,37 +1,48 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
-    <div>
-      <!-- <p>Question 1:<input type="text" v-model="spending_total_all_credit_cards_monthly"></p>
-      <p>Question 2:<input type="text" v-model="spending_amount_movable_monthly"></p> -->
-      <!-- gfwhdasvhihifjjbdvadjaj -->
+    <section id="one">
+      <div class="container">
+        <header class="major" id="one">
+          <h2>Chase Sapphire Reserve:</h2> 
+          <!-- <p>I want my questions to look like this. But maybe with the h2 coloring same as above. <a href="http://html5up.net">Link here</a>.</p> -->
+        </header>
+      </div>
+    </section>
+    <!-- copied from App.vue below -->
+    <section>
+      <!-- <h4>Form</h4> -->
+      <form method="post" action="#" v-on:submit.prevent="csrAnalysis()">
+        <div class="row gtr-uniform">
+          <!-- where my router-view was in App.vue -->
+          <div>
       <p>How much do you generally spend on your personal credit cards combined/month?
         <input type="text" v-model="spending_total_all_credit_cards_monthly"></p>
       <p>Could you move that full amount of spending each month onto one new credit card if it benefitted you?
-        <input type="text" v-model="spending_amount_movable_monthly"></p>
-      <!-- their radio buttons that don't work -->
-      <!-- <div class="col-6 col-12-medium">
-        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-        <label for="demo-priority-low">Yes</label>
-      </div>
-      <div class="col-6 col-12-medium">
-        <input type="radio" id="demo-priority-normal" name="demo-priority">
-        <label for="demo-priority-normal">No</label>
-      </div> -->
+        <!-- <input type="text" v-model="spending_amount_movable_monthly"> -->
+        <!-- their radio buttons that don't work -->
+        <div class="col-6 col-12-medium">
+          <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+          <label for="demo-priority-low">Yes</label>
+        </div>
+        <div class="col-6 col-12-medium">
+          <input type="radio" id="demo-priority-normal" name="demo-priority">
+          <label for="demo-priority-normal">No</label>
+        </div>
       <!-- end of radio buttons -->
-      <p>If no, How much of your current spending per month would you be willing to divert to this credit card?
+      </p>
+      <p>If no, how much of your current spending per month would you be willing to divert to this credit card?
         <input type="text" v-model="spending_willing_to_change_credit_cards_monthly"></p>
       <p>How much on average do you spend per month on Lyft?
         <input type="text" v-model="spending_lyft_total_monthly"></p>
-      <p>If you had to put a dollar value for yourself personally on getting free priority from Lyft in airport pick ups for a whole year, how much would that be worth to you in dollars? If this is something you would never spend money on, you should say zero.
+      <p>If you had to put a dollar value for yourself personally on getting free priority from Lyft in airport pick ups for a whole year, how much would that be worth to you in dollars? (If this is something you would never spend money on, you should say zero.)
         <input type="text" v-model="personal_value_lyft_priority_airport_pickup_12mo"></p>
       <p>How many times a month on average do you think you cancel a Lyft ride?
         <input type="text" v-model="personal_value_lyft_cancel_ride_times_monthly"></p>
       <p>How many times a year do you leave something in a Lyft?
         <input type="text" v-model="personal_value_lyft_lose_something_times_12mo"></p>
-      <p>How much would you say you spend per month on meal delivery services such as Doordash, Postmates, or Grubhub?
+      <p>How much do you spend per month on meal delivery services such as Doordash, Postmates, or Grubhub?
         <input type="text" v-model="spending_meal_deliverly_total_monthly"></p>
-      <p>How much would you say you spend per month on JUST DELIVERY FEES from meal delivery services such as Doordash, Postmates, or Grubhub?
+      <p>How much do you spend per month on JUST DELIVERY FEES from meal delivery services such as Doordash, Postmates, or Grubhub?
         <input type="text" v-model="spending_meal_deliverly_delivery_fee_monthly"></p>
       <p>How much do you plan to spend in the next 12 months on flights? If you don't have a plan, then how much do you think you've spent historically on average each year?
         <input type="text" v-model="spending_travel_flights_next_12mo"></p>
@@ -44,45 +55,81 @@
       <p>How much do you tend to spend per month dining out?
         <input type="text" v-model="spending_dining_total_monthly"></p>
       <p>Do you already have Global Entry?
-        <input type="text" v-model="global_entry_boolean"></p>
-      <!-- their radio buttons that don't work -->
-      <div class="col-6 col-12-medium">
-        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-        <label for="demo-priority-low">Yes</label>
-      </div>
-      <div class="col-6 col-12-medium">
-        <input type="radio" id="demo-priority-normal" name="demo-priority">
-        <label for="demo-priority-normal">No</label>
-      </div>
+        <!-- <input type="text" v-model="global_entry_boolean"> -->
+        <!-- their radio buttons that don't work -->
+        <div class="col-6 col-12-medium">
+          {{global_entry_boolean}}
+          <input v-model="global_entry_boolean" value="true" type="radio" name="global-entry-boolean" checked>
+          <label for="demo-priority-low">Yes</label>
+        </div>
+        <div class="col-6 col-12-medium">
+          <input v-model="global_entry_boolean" value="false" type="radio" name="global-entry-boolean">
+          <label for="demo-priority-normal">No</label>
+        </div>
+      </p>
       <!-- end of radio buttons -->
       <p>If no, do you already have TSA pre-check?
-        <input type="text" v-model="tsa_pre_boolean">
+        <!-- <input type="text" v-model="tsa_pre_boolean"> -->
+        <!-- their radio buttons that don't work -->
+        <div class="col-6 col-12-medium">
+          <input v-model="tsa_pre_boolean" value="true" type="radio" name="demo-priority" checked>
+          <label>Yes</label>
+        </div>
+        <div class="col-6 col-12-medium">
+          <input v-model="tsa_pre_boolean" value="false" type="radio" name="demo-priority">
+          <label>No</label>
+        </div>
+        <!-- end of radio buttons -->
       </p>
-      <!-- their radio buttons that don't work -->
-      <div class="col-6 col-12-medium">
-        <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-        <label for="demo-priority-low">Yes</label>
-      </div>
-      <div class="col-6 col-12-medium">
-        <input type="radio" id="demo-priority-normal" name="demo-priority">
-        <label for="demo-priority-normal">No</label>
-      </div>
-      <!-- end of radio buttons -->
-      <p>If you don't have either yet, if you had to put a dollar value for yourself personally how much would pre-check plus global entry be worth to you in dollars if it lasted for 5 years? If this is something you would never spend money on, you should say zero.
+      <p>If you don't have either yet, if you had to put a dollar value for yourself personally, how much would pre-check plus global entry be worth to you in dollars if it lasted for 5 years? If this is something you would never spend money on, you should say zero.
         <input type="text" v-model="personal_value_global_entry_and_tsa_pre"></p>
       <p>If you have pre-check but not global entry, how much would you pay to just get global entry?
         <input type="text" v-model="personal_value_global_entry"></p>
       <p>If you don't have either, and TSA+Global entry is worth less than $100 to you, how much is just pre-check for 5 years worth?
         <input type="text" v-model="personal_value_tsa_pre"></p>
-    </div>
-    <div>{{empty_array_on_my_vue_page}}</div>
+    </div>  
+    <div>Benefit: ${{empty_array_on_my_vue_page.benefit}}</div>
+    <div>Cost: ${{empty_array_on_my_vue_page.cost}}</div>
+    <div>Net Benefit: ${{empty_array_on_my_vue_page.netbenefit}}</div>
+    <div>{{empty_array_on_my_vue_page.final_message}}</div>
     <!-- my button that works -->
-    <button v-on:click="csrAnalysis()">Do my cost-benefit analysis</button>
+    <!-- <button v-on:click="csrAnalysis()">Do my cost-benefit analysis</button> -->
     <!-- their pretty turquoise button that isn't working for me -->
-    <!-- <ul class="actions fit">
-			<li><a href="#" class="button primary fit">Analyze my costs and benefits</a></li>
-		</ul> -->
+    <ul class="actions fit" id="two">
+			<li><a v-on:click="csrAnalysis()" class="button primary fit">Analyze my costs and benefits</a></li>
+		</ul>
     <!-- end of turquoise button -->
+    <p id="three">
+      <h3><a href="https://creditcards.chase.com/a1/sapphire/goreserve?CELL=6W2Q">Apply here for the Chase Sapphire Reserve*</a></h3>
+    </p>
+          <!-- radio buttons -->
+            <!-- left third radio -->
+          <div class="col-6 col-12-medium">
+            <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+            <label for="demo-priority-low">Yes</label>
+          </div>
+            <!-- middle third radio -->
+          <div class="col-6 col-12-medium">
+            <input type="radio" id="demo-priority-normal" name="demo-priority">
+            <label for="demo-priority-normal">No</label>
+          </div>
+          <!-- end of textarea with POST request button and reset button-->
+        </div>
+      </form>
+    </section>
+    <!-- <section id="one">
+      <div class="container">
+        <header class="major">
+          This is a paragraph in the "major" class
+          <h1>h1 inside header</h1>
+          <h2>h2 inside header</h2>
+          <h3>h3 inside header</h3>
+        </header>
+      </div>
+    </section> -->
+    <!-- End of Form Section!!!! -->
+    <!-- coppied from App.vue above -->
+    <!-- removed my form questions from here -->
     <!-- I want the results to go here -->
     <!-- <section id="one">
 								<div class="container">
@@ -94,19 +141,20 @@
 								</div>
 							</section> -->
     <!-- disclaimers below -->
-    <!-- <div class="row">
+    <div class="row" id="four">
       <div class="col-12 col-12-xsmall">
         <h5>About this analysis</h5>
         <ul class="alt">
-          <li>This app was built to do a conservative cost benefit analysis based on what a user already spends monthly and annually. The user may also derive benefit from additional perks of this card including but not limited to the following:</li>
-          <li>Additional Lyft Pink Membership benefits such as 3 free ride cancellations per month, reimbursed lost and found fees, and 3 complimentary 30 minute scooter or Lyft bike rides per month.</li>
-          <li>Additional DashPass benefits from DoorDash including free delivery on orders over $12 and $60 in additional DoorDash credits to use in 2021. </li>
+          <li>This app was built to do a conservative cost-benefit analysis based on this credit card's fee and what a user already spends. The user may also derive benefit from additional perks of this card including but not limited to the following:</li>
+          <li>Additional Lyft Pink Membership benefits such as three free ride cancellations per month, reimbursed lost and found fees, and three complimentary 30 minute scooter or Lyft bike rides per month.</li>
+          <li>Additional DashPass benefits from DoorDash including free delivery on orders over $12, and $60 in additional DoorDash credits to use in 2021. </li>
+          <li>*This analysis assumes the user will be getting this credit card for the first time, and is therefore eligible for the standard sign-on bonus. </li>
           <li>This analysis was done under the assumption that credit card balances are paid in full at the end of each payment period.</li>
           <li>Carrying a balance on any credit card can lead to high interest payments and a lower credit score for the card holder, which generally has a negative financial impact on the cardholder. In general, paying off all other outstanding credit card debt is recommended before opening an additional credit card.</li>
-          <li>The information provided by this app is edcuational only, and is not financial advice.</li>
+          <li>The information provided by this app is educational only, and is not financial advice.</li>
         </ul>
       </div>
-    </div> -->
+    </div>
     <!-- end of disclaimers -->
     <!-- <h2>Analysis built by {{name}}</h2>
     <h2>Copy written by {{name}}</h2> -->
@@ -139,7 +187,7 @@ export default {
       personal_value_travel_airport_lounge_access_12mo: "",
       personal_value_concierge_service: "",
       spending_dining_total_monthly: "",
-      global_entry_boolean: "",
+      global_entry_boolean: "hello",
       tsa_pre_boolean: "",
       personal_value_global_entry_and_tsa_pre: "",
       personal_value_global_entry: "",
@@ -214,7 +262,7 @@ export default {
         // First argument inside the () for the post request is the URL, the second one will be your params hash.
       axios.post("/api/calculate_cost_benefit", params).then(response => {
         console.log("Console logging the response.data:", response.data);
-        this.empty_array_on_my_vue_page.push(response.data)
+        this.empty_array_on_my_vue_page = response.data
       })
       // add the response to the html page
     }

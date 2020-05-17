@@ -3,9 +3,9 @@
       <!-- Header -->
 			<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<!-- <span class="image avatar"><img src="images/avatar.jpg" alt="" /></span> -->
 					<h1 id="logo"><a href="#">CardWise</a></h1>
-					<p>Get a custom cost-benefit analysis that takes into account what you already spend normally, and tells you how much these high fee credit cards either help you or hurt you:</p>
+					<p>Get a custom cost-benefit analysis that takes into account what you already spend normally, and tells you how much these high fee credit cards either help you or hurt you</p>
 				</header>
 
         
@@ -13,10 +13,11 @@
         <!-- This section is ONLY the button options on the navbar under "I got reprogrammed by a rogue AI and now I'm totally cray", not the whole navbar -->
 				<nav id="nav">
 					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">What's included in your Analysis?</a></li>
-						<li><a href="#three">Top High Fee Credit Cards</a></li>
-						<li><a href="#four">Contact Me Section</a></li>
+						<li><a href="#one" class="active">Get Started</a></li>
+						<li><a href="#two">Do my analysis</a></li>
+						<li><a href="#three">Apply now</a></li>
+						<li><a href="#four">About this analysis</a></li>
+						<!-- <li><a href="#four">Contact Me Section</a></li> -->
 					</ul>
 				</nav>
 
@@ -40,10 +41,10 @@
 				<!-- Main -->
 					<div id="main">
 
-            <router-view/> 
+            
 
 						<!-- One -->
-							<section id="one">
+							<!-- <section id="one">
 								<div class="image main" data-position="center">
 									<img src="images/banner.jpg" alt="" />
 								</div>
@@ -54,10 +55,10 @@
 									</header>
 									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
 								</div>
-							</section>
+							</section> -->
 
 						<!-- Two -->
-							<section id="two">
+							<!-- <section id="two">
 								<div class="container">
 									<h3>What's included in your Analysis?</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
@@ -70,18 +71,18 @@
 										<li class="icon solid fa-users">Lyft Usage</li>
 									</ul>
 								</div>
-							</section>
+							</section> -->
 
 						<!-- Three -->
-							<section id="three">
+							<!-- <section id="three">
 								<div class="container">
 									<h3>Top High Fee Credit Cards</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
 									<div class="features">
 										<article>
-											<a href="#" class="image"><img src="https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/advisor/wp-content/uploads/2019/03/chase-sapphire-reserve-040418.png" alt="" /></a>
+											<a href="#" class="image"><img src="https://thumbor.forbes.com/thumbor/fit-in/960x/https://www.forbes.com/advisor/wp-content/uploads/2019/03/chase-sapphire-reserve-040418.png" alt="" /></a> -->
                       <!-- this is what they had in src="images/pic01.jpg" -->
-											<div class="inner">
+											<!-- <div class="inner">
 												<h4>Chase Sapphire Reserve Summary?</h4>
 												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
 											</div>
@@ -102,10 +103,10 @@
 										</article>
 									</div>
 								</div>
-							</section>
+							</section> -->
 
 						<!-- Four -->
-							<section id="four">
+							<!-- <section id="four">
 								<div class="container">
 									<h3>Contact Me Section</h3>
 									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
@@ -124,13 +125,13 @@
 										</div>
 									</form>
 								</div>
-							</section>
+							</section> -->
 
 						<!-- Five -->
 						
 							<section id="five">
 								<div class="container">
-									<h3>Elements</h3>
+									<!-- <h3>Elements</h3>
 
 									<section>
 										<h4>Text</h4>
@@ -158,18 +159,19 @@
 										<h5>Blockquote</h5>
 										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
 										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+										<pre>
+                      <code>i = 0;
+                        while (!deck.isInOrder()) {
+                            print 'Iteration ' + i;
+                            deck.shuffle();
+                            i++;
+                        }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+                        print 'It took ' + i + ' iterations to sort the deck.';</code>
+                    </pre>
+									</section> -->
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
-
-									<section>
+									<!-- <section>
 										<h4>Lists</h4>
 										<div class="row">
 											<div class="col-6 col-12-xsmall">
@@ -248,9 +250,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												</ul>
 											</div>
 										</div>
-									</section>
+									</section> -->
 
-									<section>
+									<!-- <section>
 										<h4>Table</h4>
 										<h5>Default</h5>
 										<div class="table-wrapper">
@@ -296,9 +298,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 													</tr>
 												</tfoot>
 											</table>
-										</div>
+										</div> -->
 
-										<h5>Alternate</h5>
+										<!-- <h5>Alternate</h5>
 										<div class="table-wrapper">
 											<table class="alt">
 												<thead>
@@ -343,9 +345,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												</tfoot>
 											</table>
 										</div>
-									</section>
+									</section> -->
 
-									<section>
+									<!-- <section>
 										<h4>Buttons</h4>
 										<ul class="actions">
 											<li><a href="#" class="button primary">Primary</a></li>
@@ -353,9 +355,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											<li><a href="#" class="button alt">Alternate</a></li>
 										</ul>
 										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
+											<li><a href="#" class="button primary large">Large</a></li> -->
                       <!-- default gray button -->
-											<li><a href="#" class="button">Default</a></li>
+											<!-- <li><a href="#" class="button">Default</a></li>
 											<li><a href="#" class="button alt small">Small</a></li>
 										</ul>
 										<ul class="actions fit">
@@ -378,27 +380,30 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											<li><span class="button disabled">Default</span></li>
 											<li><span class="button alt disabled">Alternate</span></li>
 										</ul>
-									</section>
+									</section> -->
                   <!-- Form Section!!!! -->
-									<section>
+                  <section>
+                    <router-view/>
+                  </section>
+									<!-- <section>
 										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
+										<form method="post" action="#" v-on:submit.prevent="csrAnalysis()">
+											<div class="row gtr-uniform"> -->
                         <!-- name -->
-												<div class="col-6 col-12-xsmall">
+												<!-- <div class="col-6 col-12-xsmall">
 													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
+												</div> -->
                         <!-- end of name -->
                         <!-- email -->
-												<div class="col-6 col-12-xsmall">
+												<!-- <div class="col-6 col-12-xsmall">
 													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
+												</div> -->
                         <!-- end of email -->
                         <!-- my code -->
-                        
+                        <!-- <router-view/>  -->
                         <!-- end of my code -->
                         <!-- dropdown -->
-												<div class="col-12">
+												<!-- <div class="col-12">
 													<select name="demo-category" id="demo-category">
 														<option value="">- Category -</option>
 														<option value="1">Manufacturing</option>
@@ -406,19 +411,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 														<option value="1">Administration</option>
 														<option value="1">Human Resources</option>
 													</select>
-												</div>
+												</div> -->
                         <!-- end of dropdown -->
                         <!-- radio buttons -->
                           <!-- left third radio -->
-												<div class="col-6 col-12-medium">
+												<!-- <div class="col-6 col-12-medium">
 													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
 													<label for="demo-priority-low">Yes</label>
-												</div>
+												</div> -->
                           <!-- middle third radio -->
-												<div class="col-6 col-12-medium">
+												<!-- <div class="col-6 col-12-medium">
 													<input type="radio" id="demo-priority-normal" name="demo-priority">
 													<label for="demo-priority-normal">No</label>
-												</div>
+												</div> -->
                           <!-- right third radio -->
 												<!-- <div class="col-4 col-12-medium">
 													<input type="radio" id="demo-priority-high" name="demo-priority">
@@ -443,17 +448,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												</div> -->
                         <!-- end of radio buttons -->
                         <!-- checkboxes -->
-												<div class="col-6 col-12-medium">
+												<!-- <div class="col-6 col-12-medium">
 													<input type="checkbox" id="demo-copy" name="demo-copy">
 													<label for="demo-copy">Email me a copy of this message</label>
 												</div>
 												<div class="col-6 col-12-medium">
 													<input type="checkbox" id="demo-human" name="demo-human" checked>
 													<label for="demo-human">I am a human and not a robot</label>
-												</div>
+												</div> -->
                         <!-- end of checkboxes -->
                         <!-- textarea with POST request button and reset button-->
-												<div class="col-12">
+												<!-- <div class="col-12">
 													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
 												</div>
 												<div class="col-12">
@@ -461,18 +466,23 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 														<li><input type="submit" value="Send Message" /></li>
 														<li><input type="reset" value="Reset" class="alt" /></li>
 													</ul>
-												</div>
+												</div> -->
                         <!-- end of textarea with POST request button and reset button-->
-											</div>
+											<!-- </div>
 										</form>
-									</section>
+									</section> -->
                   <!-- End of Form Section!!!! -->
 
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
+
+									<!-- <section> -->
+                    <!-- images section -->
+										<!-- <h4>Image</h4>
+										<h5>Fit</h5> -->
+                    <!-- banner image -->
+										<!-- <span class="image fit"><img src="images/banner.jpg" alt="" /></span> -->
+                    <!-- end of banner image -->
+                    <!-- beginning of 9 card images -->
+										<!-- <div class="box alt">
 											<div class="row gtr-50 gtr-uniform">
 												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
@@ -484,11 +494,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
 												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
 											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
+										</div> -->
+                    <!-- end of 9 card images -->
+                    <!-- end of images section -->
+                    <!-- images with a paragraph of text fitted to the left and right: -->
+										<!-- <h5>Left &amp; Right</h5>
 										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
+										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p> -->
+                    <!-- end of images with a paragraph of text fitted to the left and right: -->
+									<!-- </section> -->
 
 								</div>
 							</section>
@@ -502,9 +516,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						<div class="container">
 							<ul class="copyright">
 								<li>&copy; CardWise. All rights reserved.</li>
-                <li>Creator: <a href="https://medium.com/julia-de-lorimier">Julia de Lorimier</a></li>
+                <li>Creator: <a href="https://www.linkedin.com/in/juliadelorimier/">Julia de Lorimier</a></li>
+                <li>Medium: <a href="https://medium.com/julia-de-lorimier">Blog</a></li>
                 <li>CSS Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
+                <!-- <li class="icons"><a href="https://github.com/jldelorimier0" class="icon brands fa-github"><span class="label">Github</span></a></li>
+                <li class="icons"><a href="jldelorimier@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
+            </ul>
 						</div>
 					</section>
 
