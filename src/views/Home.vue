@@ -21,13 +21,14 @@
         <!-- <input type="text" v-model="spending_amount_movable_monthly"> -->
         <!-- their radio buttons that don't work -->
         <div class="col-6 col-12-medium">
-          <input type="radio" id="demo-priority-low" name="demo-priority" checked>
+          <input type="radio" value="true" id="demo-priority-low" name="amount-movable" checked>
           <label for="demo-priority-low">Yes</label>
         </div>
         <div class="col-6 col-12-medium">
-          <input type="radio" id="demo-priority-normal" name="demo-priority">
+          <input type="radio" value="false" id="demo-priority-normal" name="amount-movable">
           <label for="demo-priority-normal">No</label>
         </div>
+        <!-- <div>full amount movable? {{}}</div> -->
       <!-- end of radio buttons -->
       </p>
       <p>If no, how much of your current spending per month would you be willing to divert to this credit card?
@@ -73,11 +74,11 @@
         <!-- their radio buttons that don't work -->
         <div class="col-6 col-12-medium">
           <input v-model="tsa_pre_boolean" value="true" type="radio" name="demo-priority" checked>
-          <label>Yes</label>
+          <label for="demo-priority-low">Yes</label>
         </div>
         <div class="col-6 col-12-medium">
           <input v-model="tsa_pre_boolean" value="false" type="radio" name="demo-priority">
-          <label>No</label>
+          <label for="demo-priority-normal">No</label>
         </div>
         <!-- end of radio buttons -->
       </p>
