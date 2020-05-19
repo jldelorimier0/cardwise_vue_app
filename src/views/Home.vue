@@ -18,16 +18,20 @@
       <p>How much do you generally spend on your personal credit cards combined/month?
         <input type="text" v-model="spending_total_all_credit_cards_monthly"></p>
       <p>Could you move that full amount of spending each month onto one new credit card if it benefitted you?
+        <!-- <select name="global-entry-boolean">
+          <option value="false">No</option>
+          <option value="true">Yes</option>
+        </select> -->
         <!-- <input type="text" v-model="spending_amount_movable_monthly"> -->
         <!-- their radio buttons that don't work -->
-        <div class="col-6 col-12-medium">
+        <!-- <div class="col-6 col-12-medium">
           <input type="radio" value="true" id="demo-priority-low" name="amount-movable" checked>
           <label for="demo-priority-low">Yes</label>
         </div>
         <div class="col-6 col-12-medium">
           <input type="radio" value="false" id="demo-priority-normal" name="amount-movable">
           <label for="demo-priority-normal">No</label>
-        </div>
+        </div> -->
         <!-- <div>full amount movable? {{}}</div> -->
       <!-- end of radio buttons -->
       </p>
@@ -57,29 +61,44 @@
         <input type="text" v-model="spending_dining_total_monthly"></p>
       <p>Do you already have Global Entry?
         <!-- <input type="text" v-model="global_entry_boolean"> -->
+        <!-- their dropdown -->
+        <select v-model="global_entry_boolean" name="global-entry-boolean">
+          <!-- i am deleting "" from the select div. not sure if I need an id attribute -->
+          <option value="false">No</option>
+          <option value="true">Yes</option>
+        </select>
+        <!-- end of their dropdown -->
         <!-- their radio buttons that don't work -->
-        <div class="col-6 col-12-medium">
+        <!-- <div class="col-6 col-12-medium">
           {{global_entry_boolean}}
+          <input type="radio">
           <input v-model="global_entry_boolean" value="true" type="radio" name="global-entry-boolean" checked>
           <label for="demo-priority-low">Yes</label>
         </div>
         <div class="col-6 col-12-medium">
           <input v-model="global_entry_boolean" value="false" type="radio" name="global-entry-boolean">
           <label for="demo-priority-normal">No</label>
-        </div>
+        </div> -->
       </p>
       <!-- end of radio buttons -->
       <p>If no, do you already have TSA pre-check?
+        <!-- their dropdown -->
+        <select v-model="tsa_pre_boolean" name="tsa-pre-boolean">
+          <!-- i am deleting "" from the select div. not sure if I need an id attribute -->
+          <option value="false">No</option>
+          <option value="true">Yes</option>
+        </select>
+        <!-- end of their dropdown -->
         <!-- <input type="text" v-model="tsa_pre_boolean"> -->
         <!-- their radio buttons that don't work -->
-        <div class="col-6 col-12-medium">
-          <input v-model="tsa_pre_boolean" value="true" type="radio" name="demo-priority" checked>
+        <!-- <div class="col-6 col-12-medium">
+          <input v-model="tsa_pre_boolean" value="true" type="radio" name="tsa-pre-boolean" checked>
           <label for="demo-priority-low">Yes</label>
         </div>
         <div class="col-6 col-12-medium">
-          <input v-model="tsa_pre_boolean" value="false" type="radio" name="demo-priority">
+          <input v-model="tsa_pre_boolean" value="false" type="radio" name="tsa-pre-boolean">
           <label for="demo-priority-normal">No</label>
-        </div>
+        </div> -->
         <!-- end of radio buttons -->
       </p>
       <p>If you don't have either yet, if you had to put a dollar value for yourself personally, how much would pre-check plus global entry be worth to you in dollars if it lasted for 5 years? If this is something you would never spend money on, you should say zero.
@@ -188,7 +207,7 @@ export default {
       personal_value_travel_airport_lounge_access_12mo: "",
       personal_value_concierge_service: "",
       spending_dining_total_monthly: "",
-      global_entry_boolean: "hello",
+      global_entry_boolean: "",
       tsa_pre_boolean: "",
       personal_value_global_entry_and_tsa_pre: "",
       personal_value_global_entry: "",
