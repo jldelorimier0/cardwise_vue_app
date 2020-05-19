@@ -15,10 +15,10 @@
         <div class="row gtr-uniform">
           <!-- where my router-view was in App.vue -->
           <div>
-      <p>How much do you generally spend on your personal credit cards combined/month?
+      <p>How much do you generally spend on your personal credit cards combined/month?*
         <input type="text" v-model="spending_total_all_credit_cards_monthly"></p>
-      <p>Could you move that full amount of spending each month onto one new credit card if it benefitted you?
-        <!-- <select name="global-entry-boolean">
+      <!-- <p>Could you move that full amount of spending each month onto one new credit card if it benefitted you?
+        <select v-model="spending_amount_movable_monthly" name="amount-movable">
           <option value="false">No</option>
           <option value="true">Yes</option>
         </select> -->
@@ -35,8 +35,8 @@
         <!-- <div>full amount movable? {{}}</div> -->
       <!-- end of radio buttons -->
       </p>
-      <p>If no, how much of your current spending per month would you be willing to divert to this credit card?
-        <input type="text" v-model="spending_willing_to_change_credit_cards_monthly"></p>
+      <!-- <p>If no, how much of your current spending per month would you be willing to divert to this credit card?
+        <input type="text" v-model="spending_willing_to_change_credit_cards_monthly"></p> -->
       <p>How much on average do you spend per month on Lyft?
         <input type="text" v-model="spending_lyft_total_monthly"></p>
       <p>If you had to put a dollar value for yourself personally on getting free priority from Lyft in airport pick ups for a whole year, how much would that be worth to you in dollars? (If this is something you would never spend money on, you should say zero.)
@@ -53,9 +53,9 @@
         <input type="text" v-model="spending_travel_flights_next_12mo"></p>
       <p>How much do you plan to spend in the next 12 months on hotels?
         <input type="text" v-model="spending_travel_hotels_next_12mo"></p>
-      <p>If you had to put a dollar value for yourself personally on free luxury airport lounge access that included access to free food and beverages for a whole year, how much would that be worth to you in dollars? If this is something you would never spend money on, you should say zero.
+      <p>If you had to put a dollar value for yourself personally on free luxury airport lounge access that included access to free food and beverages for a whole year, how much would that be worth to you in dollars? (If this is something you would never spend money on, you should say zero.)
         <input type="text" v-model="personal_value_travel_airport_lounge_access_12mo"></p>
-      <p>How many dollars do you think complimentary Concierge Service for a year is worth to you? If this is something you would never spend money on, you should say zero.
+      <p>How many dollars do you think complimentary Concierge Service for a year is worth to you? (If this is something you would never spend money on, you should say zero.)  
         <input type="text" v-model="personal_value_concierge_service"></p>
       <p>How much do you tend to spend per month dining out?
         <input type="text" v-model="spending_dining_total_monthly"></p>
@@ -101,7 +101,7 @@
         </div> -->
         <!-- end of radio buttons -->
       </p>
-      <p>If you don't have either yet, if you had to put a dollar value for yourself personally, how much would pre-check plus global entry be worth to you in dollars if it lasted for 5 years? If this is something you would never spend money on, you should say zero.
+      <p>If you don't have either yet, if you had to put a dollar value for yourself personally, how much would pre-check plus global entry be worth to you in dollars if it lasted for 5 years? (If this is something you would never spend money on, you should say zero.)
         <input type="text" v-model="personal_value_global_entry_and_tsa_pre"></p>
       <p>If you have pre-check but not global entry, how much would you pay to just get global entry?
         <input type="text" v-model="personal_value_global_entry"></p>
@@ -120,20 +120,8 @@
 		</ul>
     <!-- end of turquoise button -->
     <p id="three">
-      <h3><a href="https://creditcards.chase.com/a1/sapphire/goreserve?CELL=6W2Q">Apply here for the Chase Sapphire Reserve*</a></h3>
+      <h3><a href="https://creditcards.chase.com/a1/sapphire/goreserve?CELL=6W2Q">Apply here for the Chase Sapphire Reserve**</a></h3>
     </p>
-          <!-- radio buttons -->
-            <!-- left third radio -->
-          <div class="col-6 col-12-medium">
-            <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-            <label for="demo-priority-low">Yes</label>
-          </div>
-            <!-- middle third radio -->
-          <div class="col-6 col-12-medium">
-            <input type="radio" id="demo-priority-normal" name="demo-priority">
-            <label for="demo-priority-normal">No</label>
-          </div>
-          <!-- end of textarea with POST request button and reset button-->
         </div>
       </form>
     </section>
@@ -163,13 +151,17 @@
     <!-- disclaimers below -->
     <div class="row" id="four">
       <div class="col-12 col-12-xsmall">
+        <h5>Assumptions</h5>
+        <ul class="alt">
+          <li>*This analysis assumes that the user will move their entire monthly credit card spending to this card.</li>
+          <li>**This analysis assumes the user will be getting this credit card for the first time, and is therefore eligible for the standard sign-on bonus.</li>
+        </ul>
         <h5>About this analysis</h5>
         <ul class="alt">
           <li>This app was built to do a conservative cost-benefit analysis based on this credit card's fee and what a user already spends. The user may also derive benefit from additional perks of this card including but not limited to the following:</li>
           <li>Additional Lyft Pink Membership benefits such as three free ride cancellations per month, reimbursed lost and found fees, and three complimentary 30 minute scooter or Lyft bike rides per month.</li>
           <li>Additional DashPass benefits from DoorDash including free delivery on orders over $12, and $60 in additional DoorDash credits to use in 2021. </li>
-          <li>*This analysis assumes the user will be getting this credit card for the first time, and is therefore eligible for the standard sign-on bonus. </li>
-          <li>This analysis was done under the assumption that credit card balances are paid in full at the end of each payment period.</li>
+          <li>This analysis assumes that credit card balances are paid in full at the end of each payment period.</li>
           <li>Carrying a balance on any credit card can lead to high interest payments and a lower credit score for the card holder, which generally has a negative financial impact on the cardholder. In general, paying off all other outstanding credit card debt is recommended before opening an additional credit card.</li>
           <li>The information provided by this app is educational only, and is not financial advice.</li>
         </ul>
